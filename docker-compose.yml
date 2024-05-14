@@ -16,8 +16,9 @@ services:
         command:
         - --init.url=https://snapshot.arbitrum.foundation/sepolia/nitro-pruned.tar
         - --parent-chain.connection.url=<Your L1 eth provider EL>
-        - --parent-chain.blob-client.beacon-url=<Your L1 eth provider CL>
+#        - --parent-chain.blob-client.beacon-url=<Your L1 eth provider CL>
         - --chain.id=421614
+        - --init.prune=full
         - --http.api=net,web3,eth,debug
         - --http.corsdomain=*
         - --http.addr=0.0.0.0
@@ -25,7 +26,7 @@ services:
         - --ws.port=8548
         - --ws.addr=0.0.0.0
         - --ws.origins=*
-        - --node.batch-poster.post-4844-blobs=true
+#        - --node.batch-poster.post-4844-blobs=true
         networks:
         - node
         logging:
