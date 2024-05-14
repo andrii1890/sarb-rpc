@@ -1,0 +1,6 @@
+.env
+keystore-*
+.DS_Store
+jwtsecret
+snapdata/
+.arbitrum/
