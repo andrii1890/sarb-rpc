@@ -1,0 +1,35 @@
+networks:
+  node:
+
+services:
+    one-nitro-node:
+        image: 'offchainlabs/nitro-node:v2.3.3-6a1c1a7'
+        user: 1000:1000
+        restart: always
+        stop_grace_period: 30s
+        volumes:
+            - '/home/$USER/sarb-rpc/.arbitrum/:/home/user/.arbitrum'
+            - '/home/$USER/sarb-rpc/snapdata/:/arbitrum/snapdata/'
+        ports:
+            - '0.0.0.0:8547:8547'
+            - '0.0.0.0:8548:8548'
+        command:
+        - --init.url=https://snapshot.arbitrum.foundation/sepolia/nitro-pruned.tar
+        - --parent-chain.connection.url=<Your L1 eth provider EL>
+        - --parent-chain.blob-client.beacon-url=<Your L1 eth provider CL>
+        - --chain.id=421614
+        - --http.api=net,web3,eth,debug
+        - --http.corsdomain=*
+        - --http.addr=0.0.0.0
+        - --http.vhosts=*
+        - --ws.port=8548
+        - --ws.addr=0.0.0.0
+        - --ws.origins=*
+        - --node.batch-poster.post-4844-blobs=true
+        networks:
+        - node
+        logging:
+          driver: json-file
+          options:
+            max-size: 50m
+            max-file: "10"
