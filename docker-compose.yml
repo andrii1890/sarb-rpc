@@ -26,7 +26,6 @@ services:
         - --ws.port=8548
         - --ws.addr=0.0.0.0
         - --ws.origins=*
-        - --node.batch-poster.post-4844-blobs=true
         networks:
         - node
         logging:
