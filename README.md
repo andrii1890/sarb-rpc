@@ -61,7 +61,7 @@ For setting more then one Arbitrum node, as well as to run an Arbitrum One Class
     git clone https://github.com/andrii1890/sarb-rpc.git
     cd sarb-rpc && mkdir .arbitrum && mkdir snapdata && chmod -fR 777 .arbitrum && chmod -fR 777 snapdata
     ```
-  **!!!Cange your L1 eth provider in docker-compose.yml**
+  **!!!Cange your L1 RPC URL and L2 RPC URL (8545 and 5052) in docker-compose.yml**
 
     ```
     nano docker-compose.yml
