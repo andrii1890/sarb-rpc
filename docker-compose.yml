@@ -1,3 +1,9 @@
+#Created by st.Game
+#https://github.com/andrii1890
+#Find me at Discord: st_Game and Telegram: @Andrii1890
+
+#Version "1.0"
+
 networks:
   node:
 
@@ -18,7 +24,6 @@ services:
         - --parent-chain.connection.url=<Your L1 eth provider Execution Layer>
         - --parent-chain.blob-client.beacon-url=<Your L1 eth provider Consensus Layer>
         - --chain.id=421614
-#        - --init.prune=full or validator. default disable
         - --http.api=net,web3,eth,debug
         - --http.corsdomain=*
         - --http.addr=0.0.0.0
