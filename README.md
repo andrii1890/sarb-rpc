@@ -72,7 +72,7 @@ For setting more then one Arbitrum node, as well as to run an Arbitrum One Class
 
 - **Run Docker as a non-root user**
     ```
-    sudo usermod -aG docker <your_user>
+    sudo usermod -aG docker administrator
     ```
 
 ### Relogin to your server to take effect from usermod !!!
