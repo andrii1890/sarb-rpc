@@ -33,6 +33,28 @@ For setting more then one Arbitrum node, as well as to run an Arbitrum One Class
 !!! Note that if a database already exists, this setting will be ignored !!!
 
 ## First Step
+- **Create new user/ skip if already created user**
+  ```
+  adduser administrator
+  ```
+  Either way, you will be required to respond to a series of questions:
+
+  -Assign and confirm a password for the new user.
+  
+  -Enter any additional information about the new user. This is optional and can be skipped by pressing ENTER if you don’t wish to utilize these fields.
+  
+  -Finally, you’ll be asked to confirm that the information you provided was correct. Press Y to continue.
+  
+  Your new user is now ready for use and can be logged into with the password that you entered
+- **Grant privilages**
+  ```
+  usermod -aG sudo administrator
+  ```
+- **Login as new user**
+  ```
+  su administrator
+  ```  
+
 - **Update packages**
     ```
     sudo apt update && sudo apt upgrade -y
@@ -58,7 +80,7 @@ For setting more then one Arbitrum node, as well as to run an Arbitrum One Class
 ## Second Step 
 - **Clone this repo to your server, navigate to arbitrum-rpc folder and spin up all docker containers**
     ```
-    git clone https://github.com/andrii1890/sarb-rpc.git
+    cd $HOME/ && git clone https://github.com/andrii1890/sarb-rpc.git
     cd sarb-rpc && mkdir .arbitrum && mkdir snapdata && chmod -fR 777 .arbitrum && chmod -fR 777 snapdata
     ```
   **!!!Cange your L1 RPC URL and L2 BEACON RPC URL (8545 and 5052) in docker-compose.yml**
