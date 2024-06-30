@@ -81,7 +81,7 @@ For setting more then one Arbitrum node, as well as to run an Arbitrum One Class
 - **Clone this repo to your server, navigate to arbitrum-rpc folder and spin up all docker containers**
     ```
     cd $HOME/ && git clone https://github.com/andrii1890/sarb-rpc.git
-    cd sarb-rpc && mkdir .arbitrum && mkdir .snapdata && chmod -fR 777 .arbitrum && chmod -fR 777 .snapdata
+    cd sarb-rpc && mkdir .arbitrum && chmod -fR 777 .arbitrum
     ```
   **!!!Cange your L1 RPC URL and L2 BEACON RPC URL (8545 and 5052) in docker-compose.yml**
 
