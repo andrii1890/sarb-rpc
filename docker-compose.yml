@@ -15,7 +15,6 @@ services:
         stop_grace_period: 30s
         volumes:
             - '.arbitrum/:/home/user/.arbitrum'
-            - '.snapdata/:/arbitrum/snapdata/'
         ports:
             - '0.0.0.0:8547:8547'
             - '0.0.0.0:8548:8548'
