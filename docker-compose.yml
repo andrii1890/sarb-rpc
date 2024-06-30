@@ -14,8 +14,8 @@ services:
         restart: always
         stop_grace_period: 30s
         volumes:
-            - '/$USER/sarb-rpc/.arbitrum/:/home/user/.arbitrum'
-            - '/$USER/sarb-rpc/snapdata/:/arbitrum/snapdata/'
+            - '.arbitrum/:/home/user/.arbitrum'
+            - '.snapdata/:/arbitrum/snapdata/'
         ports:
             - '0.0.0.0:8547:8547'
             - '0.0.0.0:8548:8548'
