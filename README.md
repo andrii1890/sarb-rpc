@@ -10,7 +10,7 @@
 ## Hardware Requirements
 - At least 4 cores, 4 threads
 - 16-GB RAM or more
-- 500Gb-NVMe SSD
+- 1Tb-NVMe SSD
 - Internet Connection: A stable, high-speed internet connection and uninterrupted power supply is crucial!
 ## Software Requirements
 - Docker: The latest versions of Docker and Docker Compose
