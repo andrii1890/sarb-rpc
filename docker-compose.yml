@@ -2,14 +2,14 @@
 #https://github.com/andrii1890
 #Find me at Discord: st_Game and Telegram: @Andrii1890
 
-#Version "1.0"
+#Version "1.1"
 
 networks:
   node:
 
 services:
     one-nitro-node:
-        image: 'offchainlabs/nitro-node:v3.2.1-d81324d'
+        image: 'offchainlabs/nitro-node:v3.5.0-bdc2fd2'
         user: 1000:1000
         restart: always
         stop_grace_period: 30s
