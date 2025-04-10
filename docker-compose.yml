@@ -9,7 +9,7 @@ networks:
 
 services:
     one-nitro-node:
-        image: 'offchainlabs/nitro-node:v3.5.0-bdc2fd2'
+        image: 'offchainlabs/nitro-node:v3.5.5-90ee45c'
         user: 1000:1000
         restart: always
         stop_grace_period: 30s
