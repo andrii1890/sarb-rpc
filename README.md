@@ -14,7 +14,7 @@
 - Internet Connection: A stable, high-speed internet connection and uninterrupted power supply is crucial!
 ## Software Requirements
 - Docker: The latest versions of Docker and Docker Compose
-- Latest Docker Image: offchainlabs/nitro-node:v3.5.0-bdc2fd2 can be found: https://hub.docker.com/r/offchainlabs/nitro-node/tags
+- Latest Docker Image: offchainlabs/nitro-node:v3.5.6-rc.1-9a29a1e can be found: https://hub.docker.com/r/offchainlabs/nitro-node/tags
 - An Ethereum node synced with the mainnet (can be through third-party services)
 - Database snapshot: Here’s the link for Arbitrum: https://snapshot.arbitrum.foundation/index.html
 - Ethereum L1 and L2 configurations: L1 RPC URL and L2 chain id or name
