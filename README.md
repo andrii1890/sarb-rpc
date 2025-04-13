@@ -16,13 +16,13 @@
 - Docker: The latest versions of Docker and Docker Compose
 - Latest Docker Image: offchainlabs/nitro-node:v3.5.6-rc.1-9a29a1e can be found: https://hub.docker.com/r/offchainlabs/nitro-node/tags
 - An Ethereum node synced with the mainnet (can be through third-party services)
-- Database snapshot: Here’s the link for Arbitrum: https://snapshot.arbitrum.foundation/index.html
+- Database snapshot: Here’s the link for Arbitrum: https://snapshot-explorer.arbitrum.io/
 - Ethereum L1 and L2 configurations: L1 RPC URL and L2 chain id or name
 
 ## Setting Up Arbitrum Database Snapshot:
 Let’s start by setting the Arbitrum database snapshot. To access all the snapshots use the link provided before. On the first step of startup, you should utilize the parameter --init.url to initialize the Nitro database. Here’s an example: 
 
---init.url="https://snapshot.arbitrum.foundation/sepolia/nitro-pruned.tar"
+--init.url="https://snapshot.arbitrum.io/sepolia-rollup/2025-03-31-64390f11/pruned.tar.part0000,https://snapshot.arbitrum.io/sepolia-rollup/2025-03-31-64390f11/pruned.tar.part0001"
 
 If you’re setting up multiple nodes, it’s more efficient to download the snapshot image once and host it locally for all your nodes.
 
