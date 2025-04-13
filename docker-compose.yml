@@ -11,19 +11,21 @@ services:
     one-nitro-node:
         image: 'offchainlabs/nitro-node:v3.5.6-rc.1-9a29a1e'
         user: 1000:1000
-        restart: always
-        stop_grace_period: 30s
+        restart: unless-stopped
+        stop_grace_period: 40s
         volumes:
             - '.arbitrum/:/home/user/.arbitrum'
         ports:
             - '0.0.0.0:8547:8547'
             - '0.0.0.0:8548:8548'
         command:
-        - --init.pruned
+        - --init.latest=pruned
         - --parent-chain.connection.url=<Your L1 eth provider Execution Layer>
         - --parent-chain.blob-client.beacon-url=<Your L1 eth provider Consensus Layer>
         - --persistent.db-engine=pebble
         - --chain.id=421614
+        - --chain.name=sepolia-rollup
+        - --node.staker.enable=false
         - --http.api=net,web3,eth,debug,txpool,arbdebug,arbtrace
         - --http.corsdomain=*
         - --http.addr=0.0.0.0
