@@ -19,11 +19,12 @@ services:
             - '0.0.0.0:8547:8547'
             - '0.0.0.0:8548:8548'
         command:
-        - --init.url=https://snapshot.arbitrum.foundation/sepolia/nitro-pruned.tar
+        - --init.pruned
         - --parent-chain.connection.url=<Your L1 eth provider Execution Layer>
         - --parent-chain.blob-client.beacon-url=<Your L1 eth provider Consensus Layer>
+        - --persistent.db-engine=pebble
         - --chain.id=421614
-        - --http.api=net,web3,eth,debug
+        - --http.api=net,web3,eth,debug,txpool,arbdebug,arbtrace
         - --http.corsdomain=*
         - --http.addr=0.0.0.0
         - --http.vhosts=*
